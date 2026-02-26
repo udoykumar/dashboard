@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { baseUrl, useAppContext } from "../context/AuthContext";
+import { baseUrl } from "../context/AuthContext";
 import axios from "axios";
 
 const UserDetails = () => {
