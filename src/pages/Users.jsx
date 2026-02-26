@@ -1,10 +1,21 @@
-import React, { useState } from "react";
 import { useAppContext } from "../context/AuthContext";
+import UserCard from "../components/UserCard";
 
 const Users = () => {
   const { users } = useAppContext();
   console.log(users);
-  return <div></div>;
+
+  return !users ? (
+    <h1>loading..</h1>
+  ) : (
+    <div className=" lg:w-1/2 mt-3 lg:px-4">
+      <div className=" space-y-1 lg:h-65">
+        {users.map((user) => (
+          <UserCard key={user.id} user={user} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Users;

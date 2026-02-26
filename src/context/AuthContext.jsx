@@ -5,7 +5,8 @@ export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [token, setToken] = useState(null);
-  const [users, setUsers] = useState("");
+  const [users, setUsers] = useState([]);
+  const [dashboard, setDashboard] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -20,7 +21,22 @@ export const AppProvider = ({ children }) => {
     fetchUsers();
   }, []);
   useEffect(() => {
-    console.log(users);
+    const fetchDashboard = async () => {
+      try {
+        setLoading(true);
+        const { data } = await axios.get(`${baseUrl}api/dashboard`);
+        setDashboard(data);
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchDashboard();
+  }, []);
+
+  useEffect(() => {
+    console.log(dashboard);
   }, [users]);
 
   useEffect(() => {
@@ -49,6 +65,7 @@ export const AppProvider = ({ children }) => {
     logout,
     setUsers,
     loading,
+    dashboard,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

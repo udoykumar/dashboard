@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import Login from "../pages/Login";
@@ -7,21 +7,24 @@ import Users from "../pages/Users";
 import Analytics from "../pages/Analytics";
 import Products from "../pages/Products";
 import Dashboard from "../pages/Dashboard";
+import ProductDetails from "../components/ProductDetails";
+import UserDetails from "../components/UserDetails";
 
 const DashboardLayout = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <div className="grid grid-cols-12 min-h-screen">
-      <div className="col-span-2">
-        <Sidebar />
+    <div className="grid grid-cols-1 lg:grid-cols-12 min-h-screen">
+      <div className=" lg:col-span-2 py-4 px-2">
+        <Sidebar open={open} setOpen={setOpen} />
       </div>
 
-      <div className="col-span-10 p-6">
-        <Header />
+      <div className=" lg:col-span-10 py-4 px-2 ">
+        <Header open={open} />
 
         <Routes>
           <Route index element={<Dashboard />} />
-          <Route path="users" element={<Users />} />
-          <Route path="analytics" element={<Analytics />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/user/:id" element={<UserDetails />} />
           <Route path="products" element={<Products />} />
         </Routes>
       </div>
