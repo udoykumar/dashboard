@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
-import Login from "../pages/Login";
 import { Route, Routes } from "react-router";
-import Users from "../pages/Users";
-import Analytics from "../pages/Analytics";
 import Products from "../pages/Products";
 import Dashboard from "../pages/Dashboard";
 import ProductDetails from "../components/ProductDetails";

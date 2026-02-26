@@ -36,10 +36,6 @@ export const AppProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    console.log(dashboard);
-  }, [users]);
-
-  useEffect(() => {
     const storedToken = localStorage.getItem("token");
     if (storedToken) {
       setToken(storedToken);

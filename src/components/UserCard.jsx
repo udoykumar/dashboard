@@ -6,9 +6,9 @@ const UserCard = ({ user }) => {
   return (
     <Link
       to={`user/${user.id}`}
-      className=" flex gap-10 items-center justify-between  bg-white rounded-2xl px-4 py-3"
+      className=" flex gap-10 items-center justify-between  bg-white rounded-2xl  px-4 py-3 active:scale-95"
     >
-      <h1 className="font-bold">{user.name}</h1>
+      <h1 className="font-bold line-clamp-1">{user.name}</h1>
       <h2 className="font-semibold">{user.email}</h2>
 
       <div>

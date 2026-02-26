@@ -1,8 +1,5 @@
-import React, { useState } from "react";
 import { BiLogOut, BiMenu } from "react-icons/bi";
-import { FiUsers } from "react-icons/fi";
-import { IoAnalyticsOutline } from "react-icons/io5";
-import { MdDashboard, MdFeaturedPlayList } from "react-icons/md";
+import { MdDashboard } from "react-icons/md";
 import { NavLink } from "react-router";
 import { useAppContext } from "../context/AuthContext";
 
@@ -13,9 +10,7 @@ const Sidebar = ({ open, setOpen }) => {
 
   return (
     <>
-      {/* Mobile Hamburger */}
       <div className="lg:hidden flex justify-between items-center bg-primary p-4">
-        {/* <p className="font-bold text-lg">Dashboard</p> */}
         <button onClick={() => setOpen(!open)}>
           <BiMenu size={30} />
         </button>
@@ -38,7 +33,7 @@ const Sidebar = ({ open, setOpen }) => {
                       : "text-text hover:bg-gray-200"
                   }`
                 }
-                onClick={() => setOpen(false)} // close menu on click
+                onClick={() => setOpen(false)}
               >
                 <Icon className="w-5 h-5" />
               </NavLink>
@@ -53,8 +48,7 @@ const Sidebar = ({ open, setOpen }) => {
           </button>
         </div>
       )}
-
-      {/* Desktop / Tablet Sidebar */}
+      {/* Desktop  */}
       <div className="hidden lg:flex lg:flex-col md:h-screen md:bg-primary md:rounded-2xl md:px-6 md:py-10 md:justify-between">
         <div>
           <p className="text-lg font-bold pb-6">Dashboard</p>

@@ -12,7 +12,7 @@ const Products = () => {
   return (
     <div
       className="grid grid-cols-2 lg:grid-cols-4
-     gap-4 lg:ml-4 mt-3 lg:w-2/3"
+     gap-4 lg:ml-4 mt-3"
     >
       {data.map((product) => (
         <ProductPlan key={product.id} product={product} />

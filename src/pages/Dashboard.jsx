@@ -1,6 +1,3 @@
-import React from "react";
-import { useAppContext } from "../context/AuthContext";
-
 import Overview from "../components/Overview";
 import AnalyticsChart from "../components/AnalyticsChart";
 import Products from "./Products";
