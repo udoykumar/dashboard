@@ -2,11 +2,10 @@ import React from "react";
 import { Link } from "react-router";
 
 const UserCard = ({ user }) => {
-  console.log(user);
   return (
     <Link
       to={`user/${user.id}`}
-      className=" flex gap-10 items-center justify-between  bg-white rounded-2xl  px-4 py-3 active:scale-95"
+      className=" flex gap-10 items-center justify-between  bg-white rounded-2xl  px-4 py-3 active:scale-95 odd:bg-gray-200 even:bg-gray-100 hover:scale-95 transition-all duration-300"
     >
       <h1 className="font-bold line-clamp-1">{user.name}</h1>
       <h2 className="font-semibold">{user.email}</h2>

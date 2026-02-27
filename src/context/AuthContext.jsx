@@ -20,6 +20,7 @@ export const AppProvider = ({ children }) => {
     };
     fetchUsers();
   }, []);
+
   useEffect(() => {
     const fetchDashboard = async () => {
       try {
@@ -62,6 +63,7 @@ export const AppProvider = ({ children }) => {
     setUsers,
     loading,
     dashboard,
+ 
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

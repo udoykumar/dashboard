@@ -13,7 +13,6 @@ const ProductDetails = () => {
     };
     fetchData();
   }, [id]);
-  console.log(product);
   return (
     <div>
       <div className="bg-primary h-screen p-5 mt-3 rounded-2xl r">

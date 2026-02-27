@@ -17,7 +17,7 @@ const Login = () => {
         email,
         password,
       });
-      console.log(data);
+      console.log(data.data.email);
       const tok = data.data.token;
       if (tok) {
         localStorage.setItem("token", tok);
@@ -31,7 +31,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen w-full">
+    <div className="flex items-center justify-center min-h-screen w-full bg-primary">
       <div className="bg-white shadow-md rounded-lg px-8 py-6 max-w-md">
         <h1 className="text-2xl font-bold mb-3">Admin Panel</h1>
         <form onSubmit={onSubmitHandler}>
@@ -59,7 +59,7 @@ const Login = () => {
           </div>
           <button
             type="submit"
-            className="bg-black/90 hover:bg-black px-4 py-2 text-white mt-2 w-full rounded-md"
+            className="bg-secondary hover:bg-secondary-dull duration-300 px-4 py-2 text-white mt-2 w-full rounded-md"
           >
             {" "}
             Login

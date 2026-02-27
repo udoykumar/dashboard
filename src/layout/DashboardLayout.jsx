@@ -22,7 +22,6 @@ const DashboardLayout = () => {
           <Route index element={<Dashboard />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/user/:id" element={<UserDetails />} />
-          <Route path="products" element={<Products />} />
         </Routes>
       </div>
     </div>

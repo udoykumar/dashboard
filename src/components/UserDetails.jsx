@@ -10,11 +10,9 @@ const UserDetails = () => {
     const fetchUser = async () => {
       const response = await axios.get(`${baseUrl}api/users/${id}`);
       setUser(response.data);
-      console.log(response);
     };
     fetchUser();
   }, [id]);
-  console.log(user);
   return (
     <div className="bg-primary  h-screen p-5 mt-3 rounded-2xl r">
       <div className="bg-white p-10 flex flex-col justify-center items-center md:justify-start md:items-start rounded-2xl">

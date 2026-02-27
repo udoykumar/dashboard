@@ -6,6 +6,8 @@ A modern React + Tailwind CSS dashboard with login
 
 - **React 19** (Vite)
 - **Tailwind CSS v4**
+- **React-Router**
+- **Axios**
 - **API**: `https://task-api-eight-flax.vercel.app`
 
 ## Getting Started

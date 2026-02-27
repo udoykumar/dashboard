@@ -1,9 +1,10 @@
+import { scale } from "motion";
 import React from "react";
 import { Link } from "react-router";
-
+import { motion } from "motion/react";
 const ProductPlan = ({ product }) => {
   const { name, sales, category, id } = product;
-  console.log(product);
+
   return (
     <Link
       to={`product/${id}`}
@@ -16,11 +17,11 @@ const ProductPlan = ({ product }) => {
           Sales: <span className="font-bold">{sales}</span>
         </p>
       </div>
-      <p
+      <motion.p
         className={`text-sm font-semibold text-gray-500 uppercase  py-2 text-center rounded-md cursor-pointer ${category === "subscription" ? "text-green-600 bg-green-200" : "text-yellow-600 bg-yellow-200"}`}
       >
         {category}
-      </p>
+      </motion.p>
     </Link>
   );
 };
