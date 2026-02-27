@@ -2,12 +2,9 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import { Route, Routes } from "react-router";
-import Products from "../pages/Products";
 import Dashboard from "../pages/Dashboard";
 import ProductDetails from "../components/ProductDetails";
 import UserDetails from "../components/UserDetails";
-import { useAppContext } from "../context/AuthContext";
-import Loading from "../components/loading";
 
 const DashboardLayout = () => {
   const [open, setOpen] = useState(false);
