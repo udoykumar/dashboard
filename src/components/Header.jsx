@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 const Header = ({ open }) => {
   return (
     <>
-      {/* Mobile: show only if open is true */}
+      {/* Mobile*/}
       {open && (
         <motion.div
           initial={{ y: 20, opacity: 0 }}
@@ -49,7 +49,7 @@ const Header = ({ open }) => {
         </motion.div>
       )}
 
-      {/* Desktop: always visible */}
+      {/* Desktop */}
       <motion.div
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
