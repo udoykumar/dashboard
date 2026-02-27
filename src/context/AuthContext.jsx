@@ -12,7 +12,7 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const { data } = await axios.get(`${baseUrl}api/users`);
+        const { data } = await axios.get(`${baseUrl}/api/users`);
         setUsers(data);
       } catch (err) {
         console.error(err);
@@ -25,7 +25,7 @@ export const AppProvider = ({ children }) => {
     const fetchDashboard = async () => {
       try {
         setLoading(true);
-        const { data } = await axios.get(`${baseUrl}api/dashboard`);
+        const { data } = await axios.get(`${baseUrl}/api/dashboard`);
         setDashboard(data);
       } catch (err) {
         console.error(err);
@@ -63,7 +63,6 @@ export const AppProvider = ({ children }) => {
     setUsers,
     loading,
     dashboard,
- 
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

@@ -8,7 +8,7 @@ const UserDetails = () => {
   const [user, setUser] = useState("");
   useEffect(() => {
     const fetchUser = async () => {
-      const response = await axios.get(`${baseUrl}api/users/${id}`);
+      const response = await axios.get(`${baseUrl}/api/users/${id}`);
       setUser(response.data);
     };
     fetchUser();
