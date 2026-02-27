@@ -22,9 +22,9 @@ const Sidebar = ({ open, setOpen }) => {
       {/* Mobile Menu */}
       {open && (
         <motion.div
-          initial={{ x: -200, opacity: 0 }} // Slide from left
-          animate={{ x: 0, opacity: 1 }} // Final position
-          exit={{ x: -200, opacity: 0 }} // When closing
+          initial={{ x: -200, opacity: 0 }} 
+          animate={{ x: 0, opacity: 1 }} 
+          exit={{ x: -200, opacity: 0 }} 
           transition={{ type: "spring", stiffness: 120, damping: 20 }}
           className="lg:hidden bg-primary p-3 flex gap-4"
         >
@@ -59,8 +59,8 @@ const Sidebar = ({ open, setOpen }) => {
       )}
       {/* Desktop  */}
       <motion.div
-        initial={{ x: -20, opacity: 0 }} // slide a little from left
-        animate={{ x: 0, opacity: 1 }} // final position
+        initial={{ x: -20, opacity: 0 }} 
+        animate={{ x: 0, opacity: 1 }} 
         transition={{
           type: "spring",
           stiffness: 100,
