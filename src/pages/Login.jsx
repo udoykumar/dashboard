@@ -3,9 +3,10 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import { AppContext, baseUrl } from "../context/AuthContext";
+import Loading from "../components/loading";
 
 const Login = () => {
-  const { login } = useContext(AppContext);
+  const { login, loading } = useContext(AppContext);
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,6 +30,9 @@ const Login = () => {
       console.log(error);
     }
   };
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <div className="flex items-center justify-center min-h-screen w-full bg-primary">

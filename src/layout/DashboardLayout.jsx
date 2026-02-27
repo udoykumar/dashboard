@@ -6,9 +6,12 @@ import Products from "../pages/Products";
 import Dashboard from "../pages/Dashboard";
 import ProductDetails from "../components/ProductDetails";
 import UserDetails from "../components/UserDetails";
+import { useAppContext } from "../context/AuthContext";
+import Loading from "../components/loading";
 
 const DashboardLayout = () => {
   const [open, setOpen] = useState(false);
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 min-h-screen">
       <div className=" lg:col-span-2 py-4 px-2">

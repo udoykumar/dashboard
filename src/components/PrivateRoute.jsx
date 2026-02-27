@@ -1,11 +1,12 @@
 import React from "react";
 import { Navigate } from "react-router";
 import { useAppContext } from "../context/AuthContext";
+import Loading from "./loading";
 
 const PrivateRoute = ({ children }) => {
   const { token, loading } = useAppContext();
   if (loading) {
-    return <p>loading...</p>;
+    return <Loading />;
   }
   if (!token) {
     return <Navigate to="/" replace />;

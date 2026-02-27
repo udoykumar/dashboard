@@ -2,10 +2,11 @@ import React from "react";
 import { useAppContext } from "../context/AuthContext";
 import { FaArrowRight } from "react-icons/fa6";
 import { motion } from "motion/react";
+import Loading from "./loading";
 const Overview = () => {
   const { dashboard, loading } = useAppContext();
   if (loading) {
-    return <h1>loading...</h1>;
+    return <Loading />;
   }
   const overview = dashboard?.overview || {};
   const { totalUsers, activeUsers, revenue, growth } = overview;

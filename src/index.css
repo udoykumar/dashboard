@@ -7,3 +7,28 @@
   --color-secondary-dull: #1d734b;
   --color-text: #aeb0af;
 }
+
+@layer theme {
+  @keyframes spinCW {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spinCCW {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  .spin-cw {
+    animation: spinCW 1.2s linear infinite;
+  }
+  .spin-ccw {
+    animation: spinCCW 1s linear infinite;
+  }
+}

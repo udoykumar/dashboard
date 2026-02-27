@@ -12,10 +12,13 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
+        setLoading(true);
         const { data } = await axios.get(`${baseUrl}/api/users`);
         setUsers(data);
       } catch (err) {
         console.error(err);
+      } finally {
+        setLoading(false);
       }
     };
     fetchUsers();
